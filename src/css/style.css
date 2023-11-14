@@ -17,7 +17,8 @@ body {
   border-radius: 10px; /* 테두리 모서리 둥글게 설정 */
   padding: 20px; /* 내부 여백 설정 */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
-  width: 300px; /* 컨테이너의 폭 설정 */
+  width: 500px; /* 컨테이너의 폭 설정 */
+  height: 500px;
 }
 
 /* 투두리스트 제목 스타일 */
@@ -59,18 +60,32 @@ h1 {
 
 #todo-list {
   list-style: none;
+  height: 350px; /* 10개 아이템의 대략적인 최대 높이 */
+  overflow-y: auto;
   padding-left: 0px;
+  border: 2px solid black; /* 테두리 스타일 설정 */
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 요소들을 양 끔으로 정렬 */
+  margin-top: 10px;
+  padding-right: 20px;
+  /* 기타 li 스타일 */
 }
 
 .text {
-  width: 100px;
-  margin-left: 10px;
-  margin-right: 160px;
+  flex-grow: 1; /* 텍스트가 남은 공간을 채움 */
+  margin: 0 10px; /* 좌우 마진 추가 */
 }
 
 .edit {
-  margin-right: 5px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .delete {
+  margin-left: 10px;
+  cursor: pointer;
 }

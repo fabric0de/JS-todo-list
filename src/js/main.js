@@ -26,27 +26,27 @@ function addTodo(event) {
     todoText.style.textDecoration = checkbox.checked ? "line-through" : "none";
   });
 
-  // 수정 버튼 생성
-  const editButton = document.createElement("button");
-  editButton.textContent = "수정";
-  editButton.classList.add("edit");
-  editButton.addEventListener("click", function () {
+  // 수정 라벨 생성
+  const editLabel = document.createElement("label");
+  editLabel.textContent = "✏️";
+  editLabel.classList.add("edit");
+  editLabel.addEventListener("click", function () {
     // 수정 로직 추가
   });
 
-  // 삭제 버튼 생성
-  const deleteButton = document.createElement("button");
-  deleteButton.textContent = "삭제";
-  deleteButton.classList.add("delete");
-  deleteButton.addEventListener("click", function () {
+  // 삭제 라벨 생성
+  const deleteLabel = document.createElement("label");
+  deleteLabel.textContent = "❌";
+  deleteLabel.classList.add("delete");
+  deleteLabel.addEventListener("click", function () {
     todoList.removeChild(newTodoItem);
   });
 
   // 할 일 아이템에 요소 추가
   newTodoItem.appendChild(checkbox);
   newTodoItem.appendChild(todoText);
-  newTodoItem.appendChild(editButton);
-  newTodoItem.appendChild(deleteButton);
+  newTodoItem.appendChild(editLabel);
+  newTodoItem.appendChild(deleteLabel);
 
   // 할 일 목록에 새로운 할 일 추가
   todoList.appendChild(newTodoItem);
