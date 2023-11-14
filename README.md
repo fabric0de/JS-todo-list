@@ -2,6 +2,22 @@ My Todo List Project
 프로젝트 설명
 이 프로젝트는 HTML, CSS, JavaScript를 사용하여 간단한 투두리스트 애플리케이션을 구현합니다. 사용자는 할 일 목록을 추가, 삭제 및 관리할 수 있습니다.
 
+디렉토리 구조
+my-todo-list/
+│
+├── src/
+│ ├── js/
+│ │ └── main.js
+│ ├── css/
+│ │ └── style.css
+│ └── assets/
+│
+├── test/
+│
+├── index.html
+├── README.md
+└── package.json
+
 설치 방법
 이 프로젝트를 사용하기 위해서는 웹 브라우저만 필요합니다. 추가적인 설치는 필요하지 않습니다
 
@@ -17,4 +33,5 @@ My Todo List Project
 
 이슈를 오픈하여 버그를 보고하거나 기능을 제안합니다.
 Pull Request를 통해 직접 코드 변경을 제안합니다.
+
 # JS-todo-list
