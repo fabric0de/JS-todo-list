@@ -31,7 +31,7 @@ function addTodo(event) {
   editLabel.textContent = "✏️";
   editLabel.classList.add("edit");
   editLabel.addEventListener("click", function () {
-    // 수정 로직 추가
+    editTodo(newTodoItem, todoText);
   });
 
   // 삭제 라벨 생성
@@ -53,6 +53,25 @@ function addTodo(event) {
 
   // 입력 필드 초기화
   todoInput.value = "";
+}
+
+// 할 일 수정 함수
+function editTodo(todoItem, todoText) {
+  const input = document.createElement("input");
+  input.type = "text";
+  input.value = todoText.textContent;
+  input.addEventListener("blur", function () {
+    todoText.textContent = input.value;
+    todoItem.replaceChild(todoText, input);
+  });
+  input.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+      input.blur(); // Enter 키를 누르면 수정 완료
+    }
+  });
+
+  todoItem.replaceChild(input, todoText);
+  input.focus(); // 바로 텍스트 수정 가능하도록 포커스 설정
 }
 
 // 할 일 폼에 이벤트 리스너 추가
