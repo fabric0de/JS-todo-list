@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Todo List</title>
-    <link rel="stylesheet" href="src/css/style.css" />
-    <!-- CSS 파일 연결 -->
-  </head>
-  <body>
-    <div class="container">
-      <h1>MY TODO</h1>
-      <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="할 일을 입력하세요" />
-        <button type="submit">추가</button>
-      </form>
-      <ul id="todo-list">
-        <!-- 할 일 목록이 여기에 표시됩니다 -->
-      </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Todo List</title>
+
+  <link rel="stylesheet" href="./src/css/main.css" />
+
+  <script defer src="./src/js/main.js"></script>
+
+</head>
+
+<body>
+  <div class="todo-wrapper">
+    <header class="todo-header">
+      <h1 class="todo-title">TODO</h1>
+
+    </header>
+    <div class="todo-main">
+      <input type="text" class="todo-input">
+
+      <div class="todo-board">
+        <ul class="todo-list">
+          <!-- 추가된 투두리스트 영역 -->
+        </ul>
+        <button class="todo-deleteBtn">삭제</button>
+      </div>
     </div>
 
-    <script src="src/js/main.js"></script>
-  </body>
+  </div>
+
+
+</body>
+
 </html>
